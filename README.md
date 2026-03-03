@@ -48,3 +48,41 @@ Watch the project demo here:
 ```bash
 git clone https://github.com/yourusername/ai-customer-support-assistant.git
 cd ai-customer-support-assistant
+
+## 4. Configure Environment Variables
+
+Create a `.env` file in the root directory of the project:
+
+```env
+API_KEY=your_api_key_here
+MODEL_NAME=your_model_name_here
+
+API_KEY=your_api_key_here
+MODEL_NAME=your_model_name_here
+
+streamlit run app.py
+
+Project Structure
+AI-Customer-Support-Assistant/
+│
+├── app.py
+├── notebook.ipynb
+├── .env.example
+├── .gitignore
+├── requirements.txt
+└── README.md
+
+System Architecture
+User
+  ↓
+Streamlit UI
+  ↓
+LLM Processing
+  ↓
+Classification + Sentiment Analysis
+  ↓
+Decision Engine
+  ↓
+Response Generation
+        OR
+Human Escalation
