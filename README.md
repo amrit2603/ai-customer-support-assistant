@@ -2,7 +2,7 @@
 
 An AI-powered Customer Support Assistant built using Streamlit and Large Language Models (LLMs) that performs real-time query classification, sentiment analysis, intelligent response generation, and smart human escalation when necessary.
 
-This project simulates a structured customer support workflow rather than just a chatbot by incorporating decision logic and escalation handling.
+This project simulates a structured customer support workflow rather than just a chatbot by incorporating structured decision logic and escalation handling.
 
 ---
 
@@ -48,19 +48,43 @@ Watch the project demo here:
 ```bash
 git clone https://github.com/yourusername/ai-customer-support-assistant.git
 cd ai-customer-support-assistant
+2. Install Dependencies
 
-## 4. Configure Environment Variables
+Ensure Python 3.10+ is installed.
 
-Create a `.env` file in the root directory of the project:
+pip install -r requirements.txt
 
-```env
+If you don’t have a requirements file:
+
+pip install streamlit python-dotenv
+3. Configure Environment Variables
+
+Create a .env file in the root directory:
+
 API_KEY=your_api_key_here
 MODEL_NAME=your_model_name_here
 
+Important:
+
+Do NOT upload your .env file to GitHub.
+
+Add .env inside .gitignore.
+
+Example .gitignore:
+
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+You may include a .env.example file:
+
 API_KEY=your_api_key_here
 MODEL_NAME=your_model_name_here
-
+4. Run the Application
 streamlit run app.py
+
+The application will open in your default browser.
 
 Project Structure
 AI-Customer-Support-Assistant/
@@ -71,7 +95,6 @@ AI-Customer-Support-Assistant/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-
 System Architecture
 User
   ↓
